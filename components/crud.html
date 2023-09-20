@@ -1,0 +1,23 @@
+<!-- crud.html -->
+<form ng-submit="$ctrl.adicionarItem($ctrl.novoItem)">
+    <label for="usuario">Usuario:</label>
+    <select id="usuario" name="usuario" ng-model="$ctrl.novoItem.usuario">
+        <option value="Vitor">Vitor</option>
+        <option value="Lucas">Lucas</option>
+        <option value="Isana">Isana</option>
+        <option value="Mariana">Mariana</option>
+        <option value="Samuel">Samuel</option>
+    </select>
+
+    <!-- Adicione campos adicionais conforme necessário -->
+
+    <button type="submit">Adicionar</button>
+</form>
+
+<ul>
+    <li ng-repeat="item in $ctrl.data track by $index">
+        <span>{{ item.usuario }}</span>
+        <!-- Exiba outros campos do item conforme necessário -->
+        <button ng-click="$ctrl.removerItem($index)">Remover</button>
+    </li>
+</ul>

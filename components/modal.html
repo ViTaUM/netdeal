@@ -1,0 +1,62 @@
+<!-- Modal -->
+<div id="myModal" class="modal" ng-show="showModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal" ng-click="fecharModal()">&times;</span>
+        <h2>Adicionar Funcionalidade</h2>
+        <div class="form-group">
+            <label for="usuario">Perfil:</label>
+            <select id="perfilName" name="usuario" ng-model="perfilName" required ng-disabled="perfilNameDisabled">
+                <option value="" disabled selected>Selecione um perfil</option>
+                <option value="Analista de Sistemas">Analista de Sistemas</option>
+                <option value="Diretoria">Diretoria</option>
+                <option value="Supervisor">Supervisor</option>
+                <option value="Coordenador">Coordenador</option>
+                <option value="Estagiario">Estagiario</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div id="hierarquia">
+                <label for="hierarquia">Funcionalidade:</label>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="Cadastro" class="pai" ng-model="hierarquia.Cadastro"
+                                ng-change="marcarDesmarcarFilhos('Cadastro')"
+                                ng-click="toggleMostrarFilhos('Cadastro')"> Cadastro
+                        </label>
+                        <ul ng-show="mostrarFilhosCadastro">
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="Funcionario" class="filho"
+                                        ng-model="hierarquia.Funcionario"> Funcionario
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="Produtos" class="filho" ng-model="hierarquia.Produtos">
+                                    Produtos
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="Usuario" class="filho" ng-model="hierarquia.Usuario">
+                                    Usuario
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="Perfil" class="filho" ng-model="hierarquia.Perfil">
+                                    Perfil
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <button class="green-button" ng-click="adicionarUsuario()" ng-show="!editando">Salvar</button>
+        <button class="red-button" ng-click="fecharModal()" ng-show="!editando">Fechar</button>
+        <button class="green-button" ng-click="salvarEdicao()" ng-show="editando">Salvar Edição</button>
+    </div>
+</div>

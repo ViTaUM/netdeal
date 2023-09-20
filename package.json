@@ -1,0 +1,15 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "CRUD com hierarquias",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitor-Silva-Alves",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-animate": "^1.8.3"
+  }
+}

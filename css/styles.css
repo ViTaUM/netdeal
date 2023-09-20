@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.permissions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.permissions-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.permissions-list li:last-child {
+    border-bottom: none;
+}
+
+.permission-name {
+    font-weight: bold;
+}
+
+.permission-status {
+    font-size: 14px;
+    color: #4caf50;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+}
+
+.green-button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.green-button i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Estilizando o ícone do botão */
+.green-button i.fa {
+    font-size: 18px; /* Tamanho do ícone */
+}
+
+.red-button {
+    background-color: #FF0000; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.blue-button {
+    background-color: #87CEEB; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilos para as células de cabeçalho */
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para as células de dados */
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Estilo para realçar a primeira linha (opcional) */
+tbody tr:first-child {
+    background-color: #e0e0e0;
+}
+
+ul {
+    list-style: none;
+}
